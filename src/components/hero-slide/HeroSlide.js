@@ -24,9 +24,9 @@ const HeroSlide = () => {
             try {
                 const response = await tmdbApi.getMoviesList(movieType.popular, {params});
                 setMovieItems(response.results.slice(0, 4));
-                console.log(response);
+                // console.log(response);
             } catch {
-                console.log('error');
+                // console.log('error');
             }
         }
         getMovies();
@@ -114,7 +114,7 @@ const TrailerModal = props => {
 
     const onClose = () => iframeRef.current.setAttribute('src', '');
     
-    console.log(iframeRef.current);
+    // console.log(iframeRef.current);
 
     return (
         <Modal active={false} id={`modal_${item.id}`}>
